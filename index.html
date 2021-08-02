@@ -1,0 +1,250 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>YeneApp</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body bgcolor="#E8F6EF">
+
+  <div class="header">
+        <div class="header-right">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="skills.html">Skill</a>
+        </div>   
+        <a href="#default" class="logo">Abraham Mekuria</a>
+  </div>
+
+<div class="hello">
+    <div class="image">
+        <img src="images/aa.png" alt="">
+    </div>
+    <div class="abraham">
+      <h1>Abraham Mekuria </h1>
+      <p>Computer Science and enginnering student<br>
+       At Adama science and technology University!<br>
+
+       "በዚሁ ከቀጠልኩ "<span><h3>WOW !</h3></span>
+    </p>
+    </div>
+</div>
+
+  <br>
+
+  <div class="myself">
+    <h3>A Little About Myself </h3>
+    <p> 
+      My name is Abraham Mekuria. I grow up in small city called Agarfa . it is located in south eastern Ethiopia in bale zone agarfa wereda. I was born in October 17,1998 . 
+      from my father mekuria bayssie and my mother kebebush Bira Boru . while I was a child I was somehow I was difficult child . My mom told me that the faith of my death will be car accident or electric shock ! ha!  
+      My childhood life interesting one! I enjoyed it so much . I started my education in Weeb School . up to grade 8 I attained there. At first day of my school I realized that passing to next grade means, there is big hole and passing it ! 
+      “I also told to one of my teacher to put my rank on hundred’s place because of I want be cleaver and good student. My thought was funny”  . In Weeb school I was participating in science and technology club. 
+      My thought changed there . I create so many things by the time .
+      Then I joined Agarfa secondary and preparatory school . here I also I participated actively. I get some achievements and award  . I faced so many challenges in school . I passed all of them with help of GOD !
+      After finishing my secondary school I joined to Adama Science and Technology University . Tommorow is new day . life keeps on!
+    </p>
+  </div>
+   
+
+  <section>
+  <div class="containeer">
+    <h2 class="slide">My memories</h2>
+    <div class="mySlides">
+      <div class="numbertext">1 / 7</div>
+      <a href="#a" class="aimg"><img src="images/a.png" class="center"></a>
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 7</div>
+      <a href="#b" class="aimg"><img src="images/me.png" class="center"></a>
+    </div>
+     
+    <div class="mySlides">
+      <div class="numbertext">3 / 7</div>
+      <a href="#c" class="aimg"><img src="images/d.png" class="center"></a>
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 7</div>
+      <a href="#d" class="aimg"><img src="images/e.png" class="center"></a>
+    </div>
+      
+    <div class="mySlides">
+      <div class="numbertext">5 / 7</div>
+      <a href="#e" class="aimg"><img src="images/b.png" class="center"></a>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 7</div>
+      <a href="#f" class="aimg"><img src="images/burte.png" class="center"></a>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 7</div>
+      <a href="#g" class="aimg"><img src="images/abaye.png" class="center"></a>
+    </div>
+      
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  
+    <div class="caption-container">
+      <h4 id="caption"></h4>
+    </div>
+  
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="images/a.png" style="width:100% ;" onclick="currentSlide(1)" alt="MY childhood MEMORY">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/me.png" style="width:100%;" onclick="currentSlide(2)" alt="ME, MY beloved father and My sister">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/d.png" style="width:100%;" onclick="currentSlide(3)" alt="Me and gela">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/e.png" style="width:100%;" onclick="currentSlide(4)" alt="During Corona pandemic">
+      </div>    
+      <div class="column">
+        <img class="demo cursor" src="images/b.png" style="width:100%;" onclick="currentSlide(5)" alt="ME, MY beloved father and My sister">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/burte.png" style="width:100%;" onclick="currentSlide(6)" alt="ME, MY beloved father and My sister">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/abaye.png" style="width:100%;" onclick="currentSlide(7)" alt="ME, MY beloved father and My sister">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" activee", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " activee";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+  </script>
+
+   </section>
+
+</br></br>
+
+<div class="detail"><hl>Detail of Photos</hl></div>
+  <section >
+     
+  <div class="mycon">
+    <div class="a"> 
+        <img src="images/a.png" alt="My photo on Enkutatash Day!">  
+    </div>
+    <div class="b">
+      <h2 id="a" class="mymemo"> My photo on Enkutatash Day! </h2>
+      <h4 class="ca">  Enkutatash (Ge'ez: እንቁጣጣሽ) is a public holiday in coincidence of New Year in Ethiopia and Eritrea. 
+        It occurs on Meskerem 1 on the Ethiopian calendar, 
+        which is 11 September (or, during a leap year, 12 September) according to the Gregorian calendar. </h4>
+    </div>
+  </div>
+  <div class="mycon">
+    <div class="a"> 
+        <img src="images/me.png" alt="My photo on Fasika day!"> 
+    </div>
+   <div class="b">
+        <h2 id="b" class="mymemo">My photo on Fasika day! </h2>
+         <h4 class="cb">  
+          In Ethiopia, the most prominent and longstanding religion has been the Ethiopian Orthodox Tewahedo Church (then including the Eritrean Orthodox Tewahedo Church) since the times of Frumentius.  
+          Fasika is a climactic celebration. Fasting becomes more intense over the 55-day period of Lent for Orthodox Christians</h4>
+    </div>
+</div>
+
+<div class="mycon">
+  <div class="a"> 
+      <img src="images/d.png" alt="ME, MY beloved father and My sister"> 
+  </div>
+ <div class="b">
+      <h2 id="c" class="mymemo"> Me and My Brother Desalegn</h2>
+       <h4 class="cc"> Anteneh Abate took this photo on Gela's Gradution Day! 
+      We're going to River to Take some photo's
+      </h4>
+  </div>
+</div>
+
+<div class="mycon">
+  <div class="a"> 
+      <img src="images/e.png" alt="During Corona pandemic"> 
+  </div>
+ <div class="b">
+      <h2 id="d" class="mymemo"> During Corona pandemic </h2>
+      <h4 class="cd">  I took this photo During Corona pandemic in lockdown time  It was boring time ! 
+         people can't meet , even they can go to church or other religeus places.  </h4>
+    </div>
+</div>
+<div class="mycon">
+  <div class="a"> 
+      <img src="images/b.png" alt=" Me, My Dad and My younger sister"> 
+  </div>
+ <div class="b">
+      <h2 id="e" class="mymemo"> Me, My Dad and My younger sister </h2>
+       <h4 class="ce"> It's longtime ago , My sister woineshet took this photo . We have smile face </h4>
+  </div>
+</div>
+
+<div class="mycon">
+  <div class="a"> 
+      <img src="images/burte.png" alt="My younger sister Burtukan "> 
+  </div>
+ <div class="b">
+      <h2 id="f" class="mymemo"> My younger sister Burtukan </h2>
+       <h4 class="cf"> I took this Photo . by the time there is berahnu's wedding in our home ! I love my sister and I will about her!</h4>
+  </div>
+</div>
+
+<div class="mycon">
+  <div class="a"> 
+      <img src="images/abaye.png" alt="My Dad , Abaye "> 
+  </div>
+ <div class="b">
+      <h2 id="g" class="mymemo">My Dad , Abaye  </h2>
+       <h4 class="cg"> This photo is on his birthday in Usa . Abaye is a good man and he is "God fearing Man" all time!  
+        I love my dad very much ., he loves me too !.  when the sun set he didn't sleep till he make sure that i arrived at home or not .
+         I learned so many thing from my dad .  <br>
+         "RIP" My Dad ! you always be in my heart forever! I feel you're always with me . and pray for US!
+
+       </h4>
+  </div>
+</div>
+
+	  </div>
+
+
+  </section>
+
+</br></br>
+<footer >
+  <div style="text-align:center;"> 
+      <h3 style="text-align: center;">Created by Abraham Mekuria</h3>
+  </div>
+</footer>
+
+</body>
+</html>
